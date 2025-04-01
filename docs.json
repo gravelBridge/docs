@@ -3,7 +3,7 @@
   "theme": "linden",
   "name": "Same",
   "colors": {
-    "primary": "#ffffff",
+    "primary": "#000000",
     "light": "#ffffff",
     "dark": "#ffffff"
   },
