@@ -12,7 +12,11 @@
     "groups": [
       {
         "group": "Get Started",
-        "pages": ["introduction", "roadmap", "faq"]
+        "pages": [
+          "get-started/introduction",
+          "get-started/roadmap",
+          "get-started/faq"
+        ]
       },
       {
         "group": "Usage Limits",
