@@ -1,76 +1,67 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "linden",
+  "name": "Same",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#ffffff",
+    "light": "#ffffff",
+    "dark": "#ffffff"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
-          }
+        "group": "Get Started",
+        "pages": ["introduction", "roadmap", "faq"]
+      },
+      {
+        "group": "Usage Limits",
+        "pages": ["usage/agent-tokens", "usage/pricing"]
+      },
+      {
+        "group": "Quickstart",
+        "pages": [
+          "essentials/new-project",
+          "essentials/building",
+          "essentials/version-control",
+          "essentials/manual-editing",
+          "essentials/github-integration",
+          "essentials/deploying"
         ]
       },
       {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
+        "group": "Maximum Performance",
+        "pages": [
+          "performance/chats",
+          "performance/including-context",
+          "performance/reverting"
         ]
+      },
+      {
+        "group": "Web Browsing",
+        "pages": ["web/operation", "web/images", "web/docs"]
+      },
+      {
+        "group": "Deployment",
+        "pages": ["deployment/netlify", "deployment/download"]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://same.dev",
+          "icon": "globe"
         },
         {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "href": "https://discord.gg/tjHuQJaPsy",
+          "icon": "discord"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Announcements",
+          "href": "https://x.com/samedotdev",
+          "icon": "megaphone"
         }
       ]
     }
@@ -83,20 +74,19 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "https://discord.gg/tjHuQJaPsy"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Start Building",
+      "href": "https://same.new"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/samedotdev",
+      "discord": "https://discord.gg/tjHuQJaPsy"
     }
   }
 }
