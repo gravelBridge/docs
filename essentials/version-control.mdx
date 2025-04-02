@@ -1,0 +1,76 @@
+---
+title: Version Control
+description: "Learn how Same automatically saves your project's history and how to revert changes."
+---
+
+Same automatically keeps track of your project's history, creating checkpoints at various stages. This allows you to easily review past states, preview them, and revert if needed.
+
+## Automatic Checkpoints
+
+Same creates a checkpoint automatically:
+
+1.  **After every significant agent action:** Whenever Same makes changes like editing files, creating files, deleting files, or running certain commands, Same creates a checkpoint of the project state that is associated with that action's message block.
+
+2.  **For every user message:** A checkpoint is also saved representing the state of the project _before_ your message was sent.
+
+This ensures you have a granular history of both your instructions and Same's responses and actions.
+
+## Accessing Version History
+
+You can view the major versions (created after Same explicitly creates a `Version`) through the **Version History** panel:
+
+1.  Click the **Clock icon** located in the top-right corner of the chat panel.
+2.  A dropdown will appear showing a timeline of major versions and the latest state.
+
+<Frame caption="View version history by clicking the clock icon in the chat panel.">
+  <img
+    src="/images/version-history.png"
+    alt="Screenshot showing the clock icon and the version history dropdown."
+  />
+</Frame>
+
+## Restoring and Reverting Checkpoints
+
+Every user message and most agent action blocks (like file edits) have controls to interact with their associated checkpoints.
+
+1.  **Restore Checkpoint:** Clicking this button next to a message or action block loads a **preview** of the project as it was _at that point in time_. The editor, preview, and terminal will update to reflect that state. A green "Current Checkpoint" badge will appear next to the message/action you restored.
+
+    <Frame caption="Click 'Restore checkpoint' to preview a past state.">
+      <img
+        src="/images/restore-checkpoint.png"
+        alt="Screenshot showing the 'Restore checkpoint' button next to a message."
+      />
+    </Frame>
+    <Frame caption="The green badge indicates the currently previewed checkpoint.">
+      <img
+        src="/images/current-checkpoint.png"
+        alt="Screenshot showing the green 'Current Checkpoint' badge."
+      />
+    </Frame>
+
+2.  **Revert to Checkpoint:** After restoring a checkpoint, the button changes. Clicking "Revert to checkpoint" **permanently** reverts the project state back to that checkpoint. All subsequent messages and changes in the chat history will be cleared. Use this with caution!
+
+3.  **User Message Checkpoints:** Restoring or reverting to a user message checkpoint will load the project state as it was _just before_ that user message was sent.
+
+    <Frame caption="Click 'Revert to checkpoint' to permanently restore this state.">
+      <img
+        src="/images/chat-restore.png"
+        alt="Screenshot showing the 'Revert to checkpoint' button on a user message block."
+      />
+    </Frame>
+
+## Exiting Preview / Going to Latest
+
+If you've restored a checkpoint (previewing an older state) and want to return to the most recent version of your project without permanently reverting:
+
+1.  Click the **Clock icon** again.
+2.  Click on **"Latest changes"** at the top of the history timeline.
+
+This will reload the latest state of your project in the workbench without altering the chat history.
+
+<Frame caption="Click 'Latest changes' in the history dropdown to return to the most recent state without reverting.">
+  <img
+    src="/images/latest-changes.png"
+    alt="Screenshot highlighting the 'Latest changes' option in the version history dropdown."
+  />
+</Frame>
