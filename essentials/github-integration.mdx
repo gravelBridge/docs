@@ -1,50 +1,65 @@
 ---
 title: GitHub Integration
-description: "Connect your Same project to GitHub for version control and collaboration."
+description: "How to connect your Same project to GitHub."
 ---
 
-Same allows you to manage your project's code using Git and GitHub, providing flexibility for version control, collaboration, and deployment workflows. You can interact with GitHub in two main ways: by instructing Same or by using the integrated terminal directly.
+Manage your project's code using Git and GitHub directly within Same.
 
-## Using Same Agent for Git Actions
+## Option 1: Using Same Agent
 
-You can ask Same to perform basic Git operations like connecting to a remote repository, committing changes, and pushing.
+Instruct Same to perform Git actions.
 
 ```md
-Connect this project to a GitHub repository named 'my-same-project'.
-Then commit all current changes with the message 'Initial commit' and push to main.
+Connect this project to a new public GitHub repository named 'my-same-project'.
+Commit all changes with message 'Initial commit' and push to main.
 ```
 
-Please be ready to enter your GitHub username and Personal Access Token (for password) in the terminal when prompted. See [GitHub's documentation on managing personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) for more information.
+<Tip>
+  You may be prompted in the terminal to enter your GitHub username and a
+  [Personal Access
+  Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+  (use the token as the password).
+</Tip>
 
-<Frame caption="Use Same to run standard Git commands and perform operations on GitHub.">
+<Frame caption="Instruct Same to run Git commands.">
   <img
     src="/images/agent-github.png"
     alt="Screenshot of Same running Git commands."
   />
 </Frame>
 
-## Using the Integrated Terminal
+## Option 2: Using the Integrated Terminal
 
-For more control or complex Git operations, you can use the standard Git command-line interface directly within Same's integrated terminal.
+Use the standard Git CLI for more control.
 
-1.  **Open the Workbench:** Click the arrows icon in the top-right corner.
-2.  **Navigate to the Terminal Tab:** Select the terminal view.
-3.  **Change Directory:** **Crucially**, you must first navigate into your project's directory. The terminal starts in `/home/project`, but your code resides in a subdirectory (usually matching your project's name). Use the `ls` command to see the directory name and then `cd [your-project-directory-name]` to enter it.
-4.  **Run Git Commands:** Once inside your project directory, you can run standard Git commands:
-    - `git init`
-    - `git remote add origin <your-repo-url>`
-    - `git add .`
-    - `git commit -m "Your commit message"`
-    - `git push origin main`
-    - `git pull`, `git status`, `git log`, etc.
+<Steps>
+  <Step title="Open the Terminal">
+    Click the arrows icon to open the Workbench, then select the Terminal tab.
+  </Step>
+  <Step title="Navigate to Project Directory">
+    **Important:** The terminal starts in `/home/project`. Your code is in a subdirectory.
+    1. Run `ls` to find your project's directory name.
+    2. Run `cd [your-project-directory-name]` to enter it.
+  </Step>
+  <Step title="Run Git Commands">
+    Execute standard Git commands:
+    ```bash
+    git init
+    git remote add origin <your-repo-url>
+    git add .
+    git commit -m "Your commit message"
+    git push origin main
+    # etc. (git pull, git status, git log)
+    ```
+  </Step>
+</Steps>
 
 <Info>
-  On every page refresh, the terminal resets. Currently, you need to
-  reinitialize git with `git init` each time; we are making this much better
-  soon!
+  The terminal resets on page refresh. You may need to run `git init` again. We
+  are improving this experience.
 </Info>
 
-<Frame caption="Use the integrated terminal to run standard Git commands after navigating to your project directory.">
+<Frame caption="Run standard Git commands in the terminal after navigating to the project directory.">
   <img
     src="/images/terminal-github.png"
     alt="Screenshot of the integrated terminal showing Git commands being run."
@@ -52,23 +67,19 @@ For more control or complex Git operations, you can use the standard Git command
 </Frame>
 
 <Warning>
-  Always ensure you are in the correct project directory (`cd
-  [your-project-directory-name]`) before running Git commands like `git add`,
-  `git commit`, or `git push`. Running them in the wrong directory might lead to
-  unexpected behavior.
+  **Always** run `cd [your-project-directory-name]` before Git commands like
+  `add`, `commit`, or `push`. Running them in the wrong directory can cause
+  errors.
 </Warning>
 
 ## Downloading Your Code
 
-If you prefer to manage your code locally or use a different version control system, you can easily download your entire project as a ZIP file.
+Download your project as a ZIP file.
 
-1.  **Open the Workbench:** Click the arrows icon in the top-right corner.
-2.  **Click the Download Icon:** Locate and click the download icon (downward arrow) in the Workbench header.
+1.  Open the **Workbench**.
+2.  Click the **Download icon** in the Workbench header.
 
-This will package your current project files into a ZIP archive and initiate the download.
-
-<Frame caption="Download your project code as a ZIP file from the Workbench.">
-  {/* Placeholder for download image */}
+<Frame caption="Download your project code as a ZIP file.">
   <img
     src="/images/download-code.png"
     alt="Screenshot showing the download icon in the Workbench header."

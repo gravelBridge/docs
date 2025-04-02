@@ -1,36 +1,36 @@
 ---
 title: Building with Same
-description: "Learn how to effectively collaborate with Same to build and iterate on your projects."
+description: "How to give instructions, provide context, and iterate on your project."
 ---
 
-Building with Same is an iterative process. You provide instructions, Same generates code and performs actions, and you review the results, providing further guidance as needed. Here's how to get the most out of the building process:
+Building with Same involves instructing the agent, reviewing its work, and providing feedback.
 
-## Adding New Features
+## Giving Instructions
 
-Clearly describe the feature you want to add. Be specific about the functionality and any visual requirements.
+Clearly describe what you want Same to do. Be specific about features, functionality, and appearance.
 
 ```md
 Add a dark mode toggle button to the top right corner of the header.
-It should switch between light and dark themes for the entire application.
 ```
 
-Same will analyze your request and the current project state to implement the feature.
+Same analyzes your request and the current project state to implement the changes.
 
 ## Providing Context
 
-Context is crucial for Same to understand your requirements accurately. You can provide context in several ways:
+Good context helps Same understand your needs.
 
-- **Links:** Share URLs to documentation, examples, or inspiration sites. Same can browse the web to gather information.
+- **Links:** Provide URLs to documentation, examples, or inspiration.
   ```md
   Use the styling from this example: https://ui.shadcn.com/docs/components/button
   ```
-- **Files:** Attach relevant code snippets, design mockups (images), or configuration files directly in the chat. Use the `@ Add context` button in the chat input to select files from your project or upload new ones.
-- **Previous Messages:** Same remembers the conversation history within the current chat session and has a summary of the past chat conversation (you can include more!). Refer back to previous steps or decisions.
+- **Files & Summaries:** Use the `@ Add context` button in the chat input.
+  - Select specific project files Same needs to read or modify.
+  - Include summaries of previous relevant chats.
+- **Conversation History:** Refer to previous messages or decisions within the current chat.
 
 <Tip>
-  The more relevant context you provide, the better Same can understand your
-  intent and generate the desired output. Use the `@ Add context` button in the
-  chat input to easily add files or previous chat summaries as context.
+  Using `@ Add context` is more efficient than asking Same to search for
+  information.
 </Tip>
 
 <Frame caption="Use the '@ Add context' button to include files or summaries in your prompt.">
@@ -40,45 +40,42 @@ Context is crucial for Same to understand your requirements accurately. You can 
   />
 </Frame>
 
-## Breaking Down Large Changes
+## Breaking Down Large Tasks
 
-For complex features or significant refactoring, break down the request into smaller, manageable steps. This makes the process easier to follow and allows for course correction along the way.
+For complex changes, give Same smaller, sequential instructions.
 
 Instead of: "Rebuild the entire dashboard with a new design and add analytics."
 
 Try:
 
-1.  "Update the color scheme to match the new design guide (link)."
-2.  "Refactor the main dashboard component to use the new `Card` component."
-3.  "Add a chart component to display user signups."
-4.  "Integrate a basic analytics tracking event for button clicks."
+1.  "Update the color scheme using these hex codes: #..."
+2.  "Refactor the dashboard Card component to use Tailwind CSS."
+3.  "Add a chart component here to display user signups."
+4.  "Add analytics tracking for button clicks."
 
-This step-by-step approach helps Same focus on one task at a time, leading to more accurate results and easier debugging if issues arise.
+This helps Same focus and makes it easier to review changes.
 
 ## Reviewing and Iterating
 
-Same will show you the changes it makes (diffs) and update the live preview.
+Same shows code changes (diffs) and updates the live preview.
 
-- **Review Diffs:** Check the code changes in the tool invocation blocks to understand what Same modified.
-- **Check the Preview:** Use the live preview panel to see the visual results of the changes.
-- **Provide Feedback:** If the result isn't quite right, tell Same what needs to be adjusted. Be specific about the changes you want.
-  ```md
-  The button looks good, but can you make it slightly smaller and change the
-  text color to white in dark mode?
-  ```
+1.  **Review Diffs:** Check the tool invocation blocks to see what code changed.
+2.  **Check Preview:** Verify the visual changes in the live preview panel.
+3.  **Give Feedback:** If needed, tell Same what to adjust. Be specific.
+    ```md
+    Make the button smaller and change the text color to white in dark mode.
+    ```
 
-Building complex websites often involves several rounds of iteration. Don't hesitate to ask for adjustments until you're satisfied with the result.
+## Editing Your Messages
 
-## Editing Messages
+If you need to change a previous instruction:
 
-Made a typo or want to refine your instructions? You can edit your previous messages.
+1.  Hover over your message.
+2.  Click the **pencil icon**.
+3.  Edit the text.
+4.  Submit the changes.
 
-1.  **Hover over the message** you want to edit.
-2.  Click the **pencil icon** that appears.
-3.  Make your changes in the text area.
-4.  **Submit** the edited message.
-
-Same will then process your updated instructions, reverting the project state (if you choose so) and clearing subsequent messages.
+Same will process the updated instruction. You may be asked if you want to revert the project state to that point, which would clear subsequent messages.
 
 <Frame caption="Click the pencil icon on hover to edit a previous message.">
   <img

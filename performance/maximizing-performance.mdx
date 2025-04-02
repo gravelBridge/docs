@@ -1,43 +1,44 @@
 ---
 title: Maximizing Performance
-description: "Get the best results from Same by following these best practices for chat management, context, and version control."
+description: "Best practices for efficient development with Same."
 ---
 
-To get the most out of Same and ensure efficient, accurate development, follow these key strategies:
+Follow these strategies to get the best results and manage costs effectively when using Same.
 
 ## 1. Start New Chats Frequently
 
-Think of each chat session as a focused task or feature. Starting new chats regularly offers several benefits:
+Treat each chat as a single task or feature.
 
-- **Cost Management:** Each chat has its own context window. Shorter, focused chats prevent the context from growing excessively large, which directly reduces token consumption and associated costs.
-- **Improved Accuracy:** A clean slate prevents confusion from unrelated previous instructions or context, helping Same stay focused on the current task.
-- **Easier Debugging:** If something goes wrong, isolating the issue within a shorter chat history is much simpler.
+**Benefits:**
+
+- **Cost Control:** Prevents context windows from becoming too large, reducing token usage.
+- **Accuracy:** Keeps Same focused on the current task without confusion from old context.
+- **Debugging:** Makes it easier to isolate issues within a shorter history.
 
 **When to start a new chat:**
 
-- After successfully completing a feature.
-- When starting a new, distinct task (e.g., fixing a bug vs. adding a new component).
-- If a chat becomes too long or Same seems confused.
+- After completing a feature.
+- When switching to a significantly different task.
+- If the chat history becomes very long or Same seems confused.
 
 <Tip>
-  Use the "New Chat" button (top-right '+' icon in the chat panel) to quickly
-  start fresh.
+  Use the "New Chat" button (<Icon icon="plus" /> icon, top-right in chat panel)
+  to start fresh.
 </Tip>
 
-## 2. Provide Rich Context
+## 2. Provide Specific Context
 
-Same relies heavily on the context you provide. The better the context, the better the results.
+Help Same understand exactly what you need.
 
 <CardGroup cols={2}>
-  <Card title="Include Relevant Files" icon="file-code">
-    Use the `@ Add context` button in the chat input to select specific files
-    Same needs to understand or modify. This is much more efficient than relying
-    on Same to search for them.
+  <Card title="Use '@ Add context'" icon="at">
+    Click the `@ Add context` button in the chat input to: - Select specific
+    project files for Same to read or modify. - Include summaries of relevant
+    previous chats.
   </Card>
-  <Card title="Reference Past Conversations" icon="comments">
-    If a previous chat contains relevant decisions or code, use the `@ Add
-    context` button to include a summary of that chat. This gives Same valuable
-    background without bloating the current context window.
+  <Card title="Provide Links" icon="link">
+    Share URLs to documentation, examples, or inspiration sites. Same can browse
+    these for information.
   </Card>
 </CardGroup>
 
@@ -51,23 +52,21 @@ Same relies heavily on the context you provide. The better the context, the bett
   />
 </Frame>
 
-Learn more about providing context effectively in the [Building with Same](/essentials/building#providing-context) guide.
+Targeted context is more efficient than asking Same to search broadly. See [Building with Same](/essentials/building#providing-context).
 
-## 3. Leverage Version Control & Reverting
+## 3. Use Version Control Effectively
 
-Mistakes happen! Same automatically creates checkpoints throughout the development process. If Same makes an incorrect change or breaks something:
+If Same makes a mistake:
 
-1.  **Identify the last working state:** Use the message history or the [Version History](/essentials/version-control#accessing-version-history) panel (clock icon) to find the checkpoint before the issue occurred.
-2.  **Restore the checkpoint:** Click "Restore checkpoint" next to the relevant message or action block to preview that state.
-3.  **Revert (if necessary):** If the preview looks correct, click "Revert to checkpoint". This will permanently reset the project to that state and clear subsequent messages in the chat.
+1.  **Find the last good state:** Look through the message history or use the [Version History](/essentials/version-control#accessing-version-history) panel (clock icon <Icon icon="clock" />) to find the checkpoint _before_ the error.
+2.  **Restore checkpoint:** Click "Restore checkpoint" next to the message/action to preview that state in the workbench.
+3.  **Revert (if needed):** If the preview is correct, click "Revert to checkpoint". This resets the project to that checkpoint **(irreversible)**.
 
-<Frame caption="Use the 'Restore checkpoint' and 'Revert to checkpoint' options to manage project history.">
+<Frame caption="Use 'Restore checkpoint' and 'Revert to checkpoint' to manage project history.">
   <img
     src="/images/restore-checkpoint.png"
     alt="Screenshot showing the 'Restore checkpoint' button next to a message."
   />
 </Frame>
 
-Don't be afraid to revert. It's often faster to go back to a known good state and give Same clearer instructions than to try and fix a series of compounding errors. Read the full guide on [Version Control](/essentials/version-control).
-
-By combining frequent new chats, targeted context, and effective use of reverting, you can maximize Same's performance, manage costs, and build faster.
+Reverting to a known good state is often faster than trying to fix multiple errors. See the [Version Control](/essentials/version-control) guide.

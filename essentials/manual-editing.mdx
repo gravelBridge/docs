@@ -1,34 +1,34 @@
 ---
-title: Manual Editing
-description: "Take control with direct code editing, terminal access, and file management."
+title: Manual Editing & File Management
+description: "How to directly edit code, use the terminal, and manage files."
 ---
 
-While Same excels at generating and modifying code based on your prompts, sometimes you need to make precise manual adjustments or manage your project files directly. Same provides a powerful integrated workbench with a code editor, terminal, and file management tools.
+While Same builds based on your prompts, you can also directly interact with the project using the integrated workbench.
 
-## The Code Editor
+## Code Editor
 
-The built-in code editor allows you to directly modify the files in your project.
+Modify project files directly in the editor.
 
-<Frame caption="The integrated code editor provides syntax highlighting and file navigation.">
+<Frame caption="The workbench includes a code editor, file tree, and preview panel.">
   <img
     src="/images/workbench.png"
     alt="Screenshot of the Same workbench showing the code editor, file tree, and preview panel."
   />
 </Frame>
 
-Key features:
+**Key Features:**
 
-- **File Tree:** Navigate your project's directory structure on the left panel. Right-click (or long-press on mobile) on files or folders to access options like creating new files/folders, renaming, or deleting.
-- **Saving:** Changes are automatically saved after a period of inactivity following edits. You can also manually save using `Cmd/Ctrl + S`. Unsaved changes are indicated in the top right of a file through the presence of a `Save` button.
-- **Read-Only Mode:** If you are viewing a project you don't own, the editor will be in read-only mode. You'll need to fork the project to make edits.
+- **File Tree:** Browse directories on the left. Right-click (or long-press on mobile) for options.
+- **Saving:** Changes save automatically after inactivity, or manually with `Cmd/Ctrl + S`. An unsaved file shows a `Save` button in the header.
+- **Read-Only Mode:** If viewing a project you don't own, you must fork it to enable editing.
 
 ### Creating Files and Folders
 
-As the project owner, you can create new files and folders directly within the editor's file tree:
+(Requires project ownership)
 
-1.  **Right-click** (or long-press) on the desired parent folder (or empty space for root).
+1.  **Right-click** (or long-press) in the file tree on a folder or empty space (for root).
 2.  Select **"New File"** or **"New Folder"**.
-3.  Enter the name in the dialog that appears and confirm.
+3.  Enter a name and confirm.
 
 <Frame caption="Right-click in the file tree to create new files or folders.">
   <img
@@ -39,41 +39,40 @@ As the project owner, you can create new files and folders directly within the e
 
 ### Renaming and Deleting
 
-Owners can also rename or delete files and folders via the right-click context menu in the file tree. Deleting a folder will remove all its contents.
+(Requires project ownership)
 
-## The Terminal
+Use the right-click context menu in the file tree to rename or delete items. Deleting a folder removes all its contents.
 
-Access a fully functional terminal environment within the workbench.
+## Terminal
 
-<Frame caption="The integrated terminal allows you to run commands within your project's environment.">
+Access a shell environment within the workbench.
+
+<Frame caption="Run commands in the integrated terminal.">
   <img
     src="/images/terminal.png"
     alt="Screenshot of the integrated terminal within the Same workbench."
   />
 </Frame>
 
-Key features:
+**Key Features:**
 
-- **Run Commands:** Execute standard shell commands (`bun install`, `ls`, `git`, etc.).
-- **Working Directory:** The terminal starts in the project's root directory (`/home/project`). Use standard `cd` commands to navigate.
-- **Multiple Terminals:** Open multiple terminal tabs if needed using the '+' icon in the terminal tab bar.
-- **Output:** Command output is displayed directly in the terminal panel.
+- **Run Commands:** Execute standard commands (e.g., `bun install`, `ls`).
+- **Working Directory:** Starts in `/home/project`. Use `cd` to navigate into your project folder.
+- **Multiple Terminals:** Use the <Icon icon="plus" /> icon in the tab bar to open more terminals.
 
 <Info>
-  The terminal environment is containerized. Changes made directly via the
-  terminal might not always be perfectly reflected in Same's internal state
-  unless they modify tracked files. For file modifications, using the editor or
-  agent prompts is generally recommended.
+  The terminal is containerized and operations performed within the terminal are
+  reset on page refresh.
 </Info>
 
 ## File and Folder Uploads
 
-Project owners can upload files and folders directly into the project:
+(Requires project ownership)
 
-1.  **Drag and Drop:** Drag files or folders from your computer directly onto the file tree panel in the editor. Dropping onto a specific folder will upload into that folder; dropping onto empty space uploads to the root directory.
-2.  **Upload Buttons:** Use the dedicated "Upload File" and "Upload Folder" buttons located at the bottom of the file tree panel. These upload to an `uploads` folder at the root directory.
+1.  **Drag and Drop:** Drag files/folders onto the file tree panel. Drop on a folder to upload there, or empty space for the root.
+2.  **Upload Buttons:** Use the Upload File and Upload Folder buttons at the bottom of the file tree. These upload to an `uploads/` folder in the root.
 
-<Frame caption="Upload files or entire folders using the buttons at the bottom of the file tree.">
+<Frame caption="Upload files or folders using the buttons at the bottom of the file tree.">
   <img
     src="/images/upload-file-folder.png"
     alt="Screenshot highlighting the upload file and upload folder buttons at the bottom of the file tree."

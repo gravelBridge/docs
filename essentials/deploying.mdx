@@ -1,37 +1,39 @@
 ---
 title: Deploying Your Project
-description: "Learn how to deploy your Same projects to the web using Netlify."
+description: "How to deploy your Same projects using Netlify."
 ---
 
-Same makes deploying your finished project straightforward using Netlify. While deployments often happen automatically as part of the building process, you can also manage them manually.
+Deploy your project to the web with Same's Netlify integration.
 
-## Automatic & Manual Deployment
+## Triggering Deployment
 
-Same aims to deploy your project automatically when it determines the task is complete. However, you can also explicitly trigger a deployment by asking:
+Same often deploys automatically when a task seems complete. You can also trigger it manually:
 
-```md
-Deploy this application
-```
-
-<Frame caption="Prompt Same to deploy your application manually.">
-  <img
-    src="/images/deploy-this.png"
-    alt="Screenshot showing the prompt 'Deploy this application' in the chat input."
-  />
-</Frame>
-
-Same will then initiate the deployment process with Netlify.
+1.  **Ask Same:**
+    ```md
+    Deploy this application
+    ```
+    <Frame caption="Prompt Same to deploy your application.">
+      <img
+        src="/images/deploy-this.png"
+        alt="Screenshot showing the prompt 'Deploy this application' in the chat input."
+      />
+    </Frame>
+2.  **Use the Workbench:**
+    - Open the **Workbench**.
+    - Click the **Deploy** status button in the top-right.
+    - Click the **Deploy** button in the popover.
 
 ## Deployment URLs
 
-Once deployed, you will typically receive two URLs:
+After deployment, you'll get:
 
-1.  **Preview URL:** A unique URL for this specific deployment version. Useful for testing and sharing previews.
-2.  **Main URL:** The primary URL for your project (e.g., `your-project-name.same-app.com`). This URL always points to the latest _main_ deployment.
+1.  **Preview URL:** A unique URL for that specific deployment (e.g., `unique-id--your-project.netlify.app`). Good for testing.
+2.  **Main URL:** The primary project URL (e.g., `your-project-name.same-app.com`). Always points to the latest _main_ deployment.
 
-## Managing Your Deployment
+## Managing Deployments
 
-After a successful deployment, the status in the top-right corner of the Workbench will update (e.g., showing "Deployed"). Clicking this status reveals options to manage your deployment:
+Click the deployment status button (e.g., "Deployed") in the Workbench header to manage your deployment.
 
 <Frame caption="Click the deployment status in the Workbench to manage your deployment.">
   <img
@@ -40,11 +42,10 @@ After a successful deployment, the status in the top-right corner of the Workben
   />
 </Frame>
 
-- **Claim Deployment:** Transfer ownership of the Netlify site from Same's account to your own Netlify account. Clicking this will redirect you to Netlify. If you don't have an account, you can create one, and the site will be automatically linked to your new account. If you already have an account, simply log in.
-- **Take Down:** Unpublish your website.
+- **Claim Deployment:** Transfer the Netlify site to your own Netlify account. You'll be redirected to Netlify to log in or sign up.
+- **Take Down:** Unpublish the website.
 
 <Info>
-  For more detailed information about Netlify features and management, please
-  refer to the [official Netlify
-  documentation](https://docs.netlify.com/get-started/).
+  For advanced Netlify settings (like custom domains added *after* claiming),
+  manage the site directly on [Netlify](https://app.netlify.com/).
 </Info>

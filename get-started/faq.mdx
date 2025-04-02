@@ -1,27 +1,30 @@
 ---
 title: FAQ
-description: "Find answers to common questions about Same."
+description: "Answers to common questions about using Same."
 ---
 
 <AccordionGroup>
-  <Accordion title="How do I switch my Same project between public and private?">
-    You can change project visibility in the **Workbench**. Open the Workbench (top-right arrows) and click the lock icon to toggle between **Public** (viewable/forkable by anyone) and **Private** (accessible only to you).
+  <Accordion title="How do I make my project public or private?">
+    1.  Open the **Workbench** (click the arrows icon <Icon name="arrow-up-right-and-arrow-down-left-from-center" /> in the top-right).
+    2.  Click the **Lock icon** (<Icon icon="lock" /> / <Icon icon="unlock" />) in the Workbench header.
+    3.  This toggles between **Public** (anyone can view/fork) and **Private** (only you can access).
   </Accordion>
 
 {" "}
 
-{" "}
-
-<Accordion title="What is the refund policy if Same wastes tokens?">
-  If you believe Same malfunctioned and caused excessive token usage unrelated
-  to your prompts (e.g., due to a bug causing loops or repeated failures),
-  please contact support at [support@same.dev](mailto:support@same.dev). Include
-  your Project URL, a description of the issue, and any relevant Request IDs. We
-  review cases individually and may issue credits or refunds if a platform
-  malfunction is confirmed.
+<Accordion title="What if Same uses too many tokens due to an error?">
+  If you suspect a bug caused excessive token usage (e.g., loops, repeated
+  failures unrelated to your prompts), contact support at
+  [support@same.dev](mailto:support@same.dev). Include: * Your Project URL. * A
+  description of the issue. * Relevant Request IDs (if possible, found in error
+  messages). We review these cases individually. If a platform malfunction is
+  confirmed, we may issue credits or refunds. See [Agent
+  Tokens](/usage/agent-tokens) for more on usage.
 </Accordion>
 
-  <Accordion title="The workbench/files aren't there or are blank. What should I do?">
-    If the workbench or file tree appears blank or doesn't load, try refreshing the page. If the issue persists, you may need to [revert to the last known good version](/essentials/version-control#accessing-version-history). We are actively working on improving the client/server connection stability to prevent this from happening.
+  <Accordion title="The workbench or file tree is blank. What do I do?">
+    1.  **Refresh the page.** This often resolves temporary loading issues.
+    2.  If the problem persists, try **reverting to the last known good version** using the [Version Control](/essentials/version-control#restoring-and-reverting-checkpoints) features.
+    We are working on improving connection stability to prevent this.
   </Accordion>
 </AccordionGroup>
