@@ -1,0 +1,73 @@
+---
+title: Maximizing Performance
+description: "Get the best results from Same by following these best practices for chat management, context, and version control."
+---
+
+To get the most out of Same and ensure efficient, accurate development, follow these key strategies:
+
+## 1. Start New Chats Frequently
+
+Think of each chat session as a focused task or feature. Starting new chats regularly offers several benefits:
+
+- **Cost Management:** Each chat has its own context window. Shorter, focused chats prevent the context from growing excessively large, which directly reduces token consumption and associated costs.
+- **Improved Accuracy:** A clean slate prevents confusion from unrelated previous instructions or context, helping Same stay focused on the current task.
+- **Easier Debugging:** If something goes wrong, isolating the issue within a shorter chat history is much simpler.
+
+**When to start a new chat:**
+
+- After successfully completing a feature.
+- When starting a new, distinct task (e.g., fixing a bug vs. adding a new component).
+- If a chat becomes too long or Same seems confused.
+
+<Tip>
+  Use the "New Chat" button (top-right '+' icon in the chat panel) to quickly
+  start fresh.
+</Tip>
+
+## 2. Provide Rich Context
+
+Same relies heavily on the context you provide. The better the context, the better the results.
+
+<CardGroup cols={2}>
+  <Card title="Include Relevant Files" icon="file-code">
+    Use the `@ Add context` button in the chat input to select specific files
+    Same needs to understand or modify. This is much more efficient than relying
+    on Same to search for them.
+  </Card>
+  <Card title="Reference Past Conversations" icon="comments">
+    If a previous chat contains relevant decisions or code, use the `@ Add
+    context` button to include a summary of that chat. This gives Same valuable
+    background without bloating the current context window.
+  </Card>
+</CardGroup>
+
+<Frame
+  caption="Use the '@ Add context' button to include files or summaries in your prompt."
+  className="mt-4"
+>
+  <img
+    src="/images/add-context.png"
+    alt="Screenshot showing the '@ Add context' button in the chat input area."
+  />
+</Frame>
+
+Learn more about providing context effectively in the [Building with Same](/essentials/building#providing-context) guide.
+
+## 3. Leverage Version Control & Reverting
+
+Mistakes happen! Same automatically creates checkpoints throughout the development process. If Same makes an incorrect change or breaks something:
+
+1.  **Identify the last working state:** Use the message history or the [Version History](/essentials/version-control#accessing-version-history) panel (clock icon) to find the checkpoint before the issue occurred.
+2.  **Restore the checkpoint:** Click "Restore checkpoint" next to the relevant message or action block to preview that state.
+3.  **Revert (if necessary):** If the preview looks correct, click "Revert to checkpoint". This will permanently reset the project to that state and clear subsequent messages in the chat.
+
+<Frame caption="Use the 'Restore checkpoint' and 'Revert to checkpoint' options to manage project history.">
+  <img
+    src="/images/restore-checkpoint.png"
+    alt="Screenshot showing the 'Restore checkpoint' button next to a message."
+  />
+</Frame>
+
+Don't be afraid to revert. It's often faster to go back to a known good state and give Same clearer instructions than to try and fix a series of compounding errors. Read the full guide on [Version Control](/essentials/version-control).
+
+By combining frequent new chats, targeted context, and effective use of reverting, you can maximize Same's performance, manage costs, and build faster.

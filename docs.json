@@ -36,14 +36,8 @@
       {
         "group": "Maximum Performance",
         "pages": [
-          "performance/chats",
-          "performance/including-context",
-          "performance/reverting"
+          "performance/maximizing-performance"
         ]
-      },
-      {
-        "group": "Web Browsing",
-        "pages": ["web/operation", "web/images", "web/docs"]
       }
     ],
     "global": {
