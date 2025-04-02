@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "linden",
+  "theme": "mint",
   "name": "Same",
   "colors": {
     "primary": "#000000",
@@ -35,9 +35,7 @@
       },
       {
         "group": "Maximum Performance",
-        "pages": [
-          "performance/maximizing-performance"
-        ]
+        "pages": ["performance/maximizing-performance"]
       }
     ],
     "global": {
