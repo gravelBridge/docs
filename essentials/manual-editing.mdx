@@ -1,0 +1,81 @@
+---
+title: Manual Editing
+description: "Take control with direct code editing, terminal access, and file management."
+---
+
+While Same excels at generating and modifying code based on your prompts, sometimes you need to make precise manual adjustments or manage your project files directly. Same provides a powerful integrated workbench with a code editor, terminal, and file management tools.
+
+## The Code Editor
+
+The built-in code editor allows you to directly modify the files in your project.
+
+<Frame caption="The integrated code editor provides syntax highlighting and file navigation.">
+  <img
+    src="/images/workbench.png"
+    alt="Screenshot of the Same workbench showing the code editor, file tree, and preview panel."
+  />
+</Frame>
+
+Key features:
+
+- **File Tree:** Navigate your project's directory structure on the left panel. Right-click (or long-press on mobile) on files or folders to access options like creating new files/folders, renaming, or deleting.
+- **Saving:** Changes are automatically saved after a period of inactivity following edits. You can also manually save using `Cmd/Ctrl + S`. Unsaved changes are indicated in the top right of a file through the presence of a `Save` button.
+- **Read-Only Mode:** If you are viewing a project you don't own, the editor will be in read-only mode. You'll need to fork the project to make edits.
+
+### Creating Files and Folders
+
+As the project owner, you can create new files and folders directly within the editor's file tree:
+
+1.  **Right-click** (or long-press) on the desired parent folder (or empty space for root).
+2.  Select **"New File"** or **"New Folder"**.
+3.  Enter the name in the dialog that appears and confirm.
+
+<Frame caption="Right-click in the file tree to create new files or folders.">
+  <img
+    src="/images/new-file-folder.png"
+    alt="Screenshot showing the file tree context menu with options for New File and New Folder."
+  />
+</Frame>
+
+### Renaming and Deleting
+
+Owners can also rename or delete files and folders via the right-click context menu in the file tree. Deleting a folder will remove all its contents.
+
+## The Terminal
+
+Access a fully functional terminal environment within the workbench.
+
+<Frame caption="The integrated terminal allows you to run commands within your project's environment.">
+  <img
+    src="/images/terminal.png"
+    alt="Screenshot of the integrated terminal within the Same workbench."
+  />
+</Frame>
+
+Key features:
+
+- **Run Commands:** Execute standard shell commands (`bun install`, `ls`, `git`, etc.).
+- **Working Directory:** The terminal starts in the project's root directory (`/home/project`). Use standard `cd` commands to navigate.
+- **Multiple Terminals:** Open multiple terminal tabs if needed using the '+' icon in the terminal tab bar.
+- **Output:** Command output is displayed directly in the terminal panel.
+
+<Info>
+  The terminal environment is containerized. Changes made directly via the
+  terminal might not always be perfectly reflected in Same's internal state
+  unless they modify tracked files. For file modifications, using the editor or
+  agent prompts is generally recommended.
+</Info>
+
+## File and Folder Uploads
+
+Project owners can upload files and folders directly into the project:
+
+1.  **Drag and Drop:** Drag files or folders from your computer directly onto the file tree panel in the editor. Dropping onto a specific folder will upload into that folder; dropping onto empty space uploads to the root directory.
+2.  **Upload Buttons:** Use the dedicated "Upload File" and "Upload Folder" buttons located at the bottom of the file tree panel. These upload to an `uploads` folder at the root directory.
+
+<Frame caption="Upload files or entire folders using the buttons at the bottom of the file tree.">
+  <img
+    src="/images/upload-file-folder.png"
+    alt="Screenshot highlighting the upload file and upload folder buttons at the bottom of the file tree."
+  />
+</Frame>

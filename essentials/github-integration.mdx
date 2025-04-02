@@ -1,0 +1,76 @@
+---
+title: GitHub Integration
+description: "Connect your Same project to GitHub for version control and collaboration."
+---
+
+Same allows you to manage your project's code using Git and GitHub, providing flexibility for version control, collaboration, and deployment workflows. You can interact with GitHub in two main ways: by instructing Same or by using the integrated terminal directly.
+
+## Using Same Agent for Git Actions
+
+You can ask Same to perform basic Git operations like connecting to a remote repository, committing changes, and pushing.
+
+```md
+Connect this project to a GitHub repository named 'my-same-project'.
+Then commit all current changes with the message 'Initial commit' and push to main.
+```
+
+Please be ready to enter your GitHub username and Personal Access Token (for password) in the terminal when prompted. See [GitHub's documentation on managing personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) for more information.
+
+<Frame caption="Use Same to run standard Git commands and perform operations on GitHub.">
+  <img
+    src="/images/agent-github.png"
+    alt="Screenshot of Same running Git commands."
+  />
+</Frame>
+
+## Using the Integrated Terminal
+
+For more control or complex Git operations, you can use the standard Git command-line interface directly within Same's integrated terminal.
+
+1.  **Open the Workbench:** Click the arrows icon in the top-right corner.
+2.  **Navigate to the Terminal Tab:** Select the terminal view.
+3.  **Change Directory:** **Crucially**, you must first navigate into your project's directory. The terminal starts in `/home/project`, but your code resides in a subdirectory (usually matching your project's name). Use the `ls` command to see the directory name and then `cd [your-project-directory-name]` to enter it.
+4.  **Run Git Commands:** Once inside your project directory, you can run standard Git commands:
+    - `git init`
+    - `git remote add origin <your-repo-url>`
+    - `git add .`
+    - `git commit -m "Your commit message"`
+    - `git push origin main`
+    - `git pull`, `git status`, `git log`, etc.
+
+<Info>
+  On every page refresh, the terminal resets. Currently, you need to
+  reinitialize git with `git init` each time; we are making this much better
+  soon!
+</Info>
+
+<Frame caption="Use the integrated terminal to run standard Git commands after navigating to your project directory.">
+  <img
+    src="/images/terminal-github.png"
+    alt="Screenshot of the integrated terminal showing Git commands being run."
+  />
+</Frame>
+
+<Warning>
+  Always ensure you are in the correct project directory (`cd
+  [your-project-directory-name]`) before running Git commands like `git add`,
+  `git commit`, or `git push`. Running them in the wrong directory might lead to
+  unexpected behavior.
+</Warning>
+
+## Downloading Your Code
+
+If you prefer to manage your code locally or use a different version control system, you can easily download your entire project as a ZIP file.
+
+1.  **Open the Workbench:** Click the arrows icon in the top-right corner.
+2.  **Click the Download Icon:** Locate and click the download icon (downward arrow) in the Workbench header.
+
+This will package your current project files into a ZIP archive and initiate the download.
+
+<Frame caption="Download your project code as a ZIP file from the Workbench.">
+  {/* Placeholder for download image */}
+  <img
+    src="/images/download-code.png"
+    alt="Screenshot showing the download icon in the Workbench header."
+  />
+</Frame>
