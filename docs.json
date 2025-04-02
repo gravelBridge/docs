@@ -44,10 +44,6 @@
       {
         "group": "Web Browsing",
         "pages": ["web/operation", "web/images", "web/docs"]
-      },
-      {
-        "group": "Deployment",
-        "pages": ["deployment/netlify", "deployment/download"]
       }
     ],
     "global": {

@@ -1,0 +1,50 @@
+---
+title: Deploying Your Project
+description: "Learn how to deploy your Same projects to the web using Netlify."
+---
+
+Same makes deploying your finished project straightforward using Netlify. While deployments often happen automatically as part of the building process, you can also manage them manually.
+
+## Automatic & Manual Deployment
+
+Same aims to deploy your project automatically when it determines the task is complete. However, you can also explicitly trigger a deployment by asking:
+
+```md
+Deploy this application
+```
+
+<Frame caption="Prompt Same to deploy your application manually.">
+  <img
+    src="/images/deploy-this.png"
+    alt="Screenshot showing the prompt 'Deploy this application' in the chat input."
+  />
+</Frame>
+
+Same will then initiate the deployment process with Netlify.
+
+## Deployment URLs
+
+Once deployed, you will typically receive two URLs:
+
+1.  **Preview URL:** A unique URL for this specific deployment version. Useful for testing and sharing previews.
+2.  **Main URL:** The primary URL for your project (e.g., `your-project-name.same-app.com`). This URL always points to the latest _main_ deployment.
+
+## Managing Your Deployment
+
+After a successful deployment, the status in the top-right corner of the Workbench will update (e.g., showing "Deployed"). Clicking this status reveals options to manage your deployment:
+
+<Frame caption="Click the deployment status in the Workbench to manage your deployment.">
+  <img
+    src="/images/deploy.png"
+    alt="Screenshot showing the deployment management options like 'Claim Deployment' and 'Take Down'."
+  />
+</Frame>
+
+- **Claim Deployment:** Transfer ownership of the Netlify site from Same's account to your own Netlify account. Clicking this will redirect you to Netlify. If you don't have an account, you can create one, and the site will be automatically linked to your new account. If you already have an account, simply log in.
+- **Take Down:** Unpublish your website.
+
+<Info>
+  For more detailed information about Netlify features and management, please
+  refer to the [official Netlify
+  documentation](https://docs.netlify.com/get-started/).
+</Info>
