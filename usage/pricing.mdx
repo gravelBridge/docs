@@ -3,37 +3,52 @@ title: Pricing
 description: "Simple and transparent pricing for Same."
 ---
 
-Same offers a straightforward pricing model designed to scale with your usage.
+Same offers straightforward pricing plans designed to scale with your usage. Choose the plan that best fits your needs.
 
-## Pro Plan
+## Plans
 
-Our Pro plan provides ample resources for most users and allows for additional usage as needed.
-
-<CardGroup cols={1}>
-  <Card title="Pro Plan - $10/month" icon="credit-card">
+<CardGroup cols={2}>
+  <Card title="Free Plan" icon="sparkles">
     <div className="flex flex-col space-y-2">
       <span>**Included:**</span>
       <ul className="list-disc pl-5">
-        <li>**2 million** agent tokens per month</li>
+        <li>**500,000** agent tokens per month</li>
+        <li>Community support</li>
+      </ul>
+      <span>
+        Perfect for trying out Same or for occasional use on small projects.
+      </span>
+    </div>
+  </Card>
+  <Card title="Pro Plan - $10/month" icon="credit-card">
+    <div className="flex flex-col space-y-2">
+      <span>**Everything in Free, plus:**</span>
+      <ul className="list-disc pl-5">
+        <li>**2 million** agent tokens per month included</li>
+        <li>Priority support</li>
       </ul>
       <span>**Additional Usage:**</span>
       <ul className="list-disc pl-5">
         <li>**$5** per additional 1 million agent tokens</li>
       </ul>
       <span>
-        This plan is ideal for individuals and teams actively using Same for UI
-        cloning and iteration.
+        Ideal for individuals and teams actively using Same for development.
       </span>
     </div>
   </Card>
 </CardGroup>
 
+## What are Agent Tokens?
+
+Same uses "agent tokens" to measure the computational resources used during interactions. Think of tokens as pieces of words or code. For more details on how tokens work, see the [Agent Tokens](/usage/agent-tokens) page.
+
 ## How Usage is Calculated
 
 Usage is based on **agent tokens**. Every interaction with Same, including processing prompts, analyzing context (like URLs or images), and generating code, consumes tokens.
 
-- **Base Tokens**: Your $10 monthly subscription includes 2 million agent tokens.
-- **Overage**: If you exceed 2 million tokens in a month, you'll be charged $5 for each additional million tokens used.
+- **Free Plan Tokens**: Includes 500,000 agent tokens per month. Upgrade to Pro for more tokens.
+- **Pro Plan Base Tokens**: Your $10 monthly subscription includes 2 million agent tokens.
+- **Pro Plan Overage**: If you exceed 2 million tokens in a month on the Pro plan, you'll be charged $5 for each additional million tokens used.
 
 You can monitor your usage in your account settings. Learn more about [Agent Tokens](/usage/agent-tokens).
 
